@@ -52,6 +52,7 @@
 		A62CE7F01152584B332B2C4D1C0645AD /* DatePickerViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0A5CCEA8EEE06D6371AD2762E860C4C6 /* DatePickerViewController.xib */; };
 		A6749520F2CE2199CB11C7824B4953B3 /* blue-radio-button-deselected-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D620188B0E9D4601CC4277284A65AB4 /* blue-radio-button-deselected-white@2x.png */; };
 		A68ED0FCBD96062546070CC9AF546628 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6CBB58079906B68AE1E01EE31B4C1F /* TextFieldTableViewCell.xib */; };
+		AA3DEF23220A1D1000D76D69 /* NewTestHelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DEF22220A1D1000D76D69 /* NewTestHelloWorld.swift */; };
 		B13B299661BCB1282A789C979F006F71 /* TableUIUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6E4015D9EB453CE997CEBD5AED72D /* TableUIUpdater.swift */; };
 		B1A25B92D8793987DD5F6DAC286CF981 /* blue-tick-box-not-ticked-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FA90B8F6C6D2D2EDBDE1E335785C3 /* blue-tick-box-not-ticked-white@2x.png */; };
 		BFED5177834F161C8A0A5E397443AB98 /* SurveyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C6B1C6DCE37F72FBC67F66913EA9A /* SurveyDataSource.swift */; };
@@ -160,6 +161,7 @@
 		A74DA008CE7D8582E9B37E3C83C3711F /* DefaultSurveyTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultSurveyTheme.swift; sourceTree = "<group>"; };
 		A7C59FF28985FC7209D093E7DB4BFFF2 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		A9E4ADCCDD0D4E2EEAF2D66E1B7F28A9 /* Pods-SurveyNative_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SurveyNative_Tests-dummy.m"; sourceTree = "<group>"; };
+		AA3DEF22220A1D1000D76D69 /* NewTestHelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestHelloWorld.swift; sourceTree = "<group>"; };
 		AD862AB3AC26BBC08334FE9A45AA3D23 /* SurveyTableViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SurveyTableViewDelegate.swift; sourceTree = "<group>"; };
 		ADB227BC1BE7A895AE09725F844196EA /* PickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		AE359B55F542C59189F8D4D361C2B6AF /* blue-radio-button-selected-white.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "blue-radio-button-selected-white.png"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 		EA63A37072DADFF1A2FAEBE3B963FD95 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AA3DEF22220A1D1000D76D69 /* NewTestHelloWorld.swift */,
 				8DF5C69B9DCA6DE320774E923A2913A2 /* CustomConditionDelegate.swift */,
 				A74DA008CE7D8582E9B37E3C83C3711F /* DefaultSurveyTheme.swift */,
 				8A6D793AB1F73C4B374FCCB3E8621F6E /* DefaultTableCellDataDelegate.swift */,
@@ -573,6 +576,9 @@
 					0C5E987D025432A553E8D37F83C8080D = {
 						LastSwiftMigration = 1010;
 					};
+					71F74C42CE91F8AEB22C2E281A26F2D5 = {
+						LastSwiftMigration = 1010;
+					};
 				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -640,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3DEF23220A1D1000D76D69 /* NewTestHelloWorld.swift in Sources */,
 				13D498F23038EE5CBF06204DFDDE3A96 /* Pods-SurveyNative_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +740,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BAE457D15598C534B475D32DF2EE25D /* Pods-SurveyNative_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1005,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90A0CC926C90C4633CCBA81B525B21A9 /* Pods-SurveyNative_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
