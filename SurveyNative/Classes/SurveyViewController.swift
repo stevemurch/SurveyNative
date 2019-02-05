@@ -30,7 +30,7 @@ open class SurveyViewController: UIViewController {
       return DefaultSurveyTheme()
    }
 
-    open func surveyDictObject() -> [String: Any?]
+   open func surveyDictObject() -> [String: Any?]
     {
         return DefaultSurveyDict().getDict()
     }
@@ -50,7 +50,10 @@ open class SurveyViewController: UIViewController {
    override open func viewDidLoad() {
       super.viewDidLoad()
       
-      surveyQuestions = SurveyQuestions.load(surveyJsonFile(), surveyTheme: surveyTheme())
+      //surveyQuestions = SurveyQuestions.load(surveyJsonFile(), surveyTheme: surveyTheme())
+    
+    surveyQuestions = SurveyQuestions.loadFromJsonObject(
+        dict: surveyDictObject(), surveyTheme: surveyTheme())
       
       self.title = surveyTitle()
       

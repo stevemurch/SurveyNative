@@ -167,6 +167,26 @@ open class SurveyQuestions {
    func questionIndex(for section: Int) -> Int {
       return section + self.previousSkipCount[section]
    }
+    
+    class open func loadFromJsonObject(dict: [String: Any?], surveyTheme: SurveyTheme) -> SurveyQuestions? {
+        var loadedQuestions : SurveyQuestions? = nil
+        if dict.count > 0 {
+            do {
+                //let dict = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : Any?]
+                Logger.log(dict)
+                loadedQuestions = SurveyQuestions([dict["questions"]] as! [[String : Any?]], submitData: dict["submit"] as! [String : String], surveyTheme: surveyTheme)
+                if let autoFocus = dict["auto_focus_text"] as? Bool {
+                    loadedQuestions?.autoFocusText = autoFocus
+                }
+            } catch {
+                Logger.log(error.localizedDescription, level: .error)
+            }
+        } else {
+            Logger.log("Error: empty dictionary", level: .error)
+        }
+        return loadedQuestions
+    }
+    
    
    func numSkippedBefore(questionIndex: Int) -> Int {
       var skippedBefore : Int? = nil
