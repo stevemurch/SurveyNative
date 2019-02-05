@@ -29,6 +29,11 @@ open class SurveyViewController: UIViewController {
    open func surveyTheme() -> SurveyTheme {
       return DefaultSurveyTheme()
    }
+
+    open func surveyDictObject() -> [String: Any?]
+    {
+        return DefaultSurveyDict().getDict()
+    }
    
    open func setSurveyAnswerDelegate(_ surveyAnswerDelegate: SurveyAnswerDelegate) {
       surveyQuestions?.setSurveyAnswerDelegate(surveyAnswerDelegate)
