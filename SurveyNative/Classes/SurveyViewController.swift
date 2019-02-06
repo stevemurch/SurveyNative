@@ -17,6 +17,8 @@ open class SurveyViewController: UIViewController {
    open var dataSource: UITableViewDataSource?
    open var delegate : UITableViewDelegate?
    open var cellDataDelegate : TableCellDataDelegate?
+    
+    open var surveyDict: [String: Any?] = [:]
    
    open func surveyJsonFile() -> String {
       preconditionFailure("This method must be overridden")
@@ -32,7 +34,20 @@ open class SurveyViewController: UIViewController {
 
    open func surveyDictObject() -> [String: Any?]
     {
-        return DefaultSurveyDict().getDict()
+        if (surveyDict.count == 0) {
+            return DefaultSurveyDict().getDict()
+        }
+        else
+        {
+            return self.surveyDict
+        }
+        
+    }
+
+    open func setSurveyDict(dict: [String:Any?]) {
+        
+        surveyDict = dict
+        
     }
    
    open func setSurveyAnswerDelegate(_ surveyAnswerDelegate: SurveyAnswerDelegate) {
