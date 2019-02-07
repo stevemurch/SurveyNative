@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol SurveyDict {
-    func getDict() -> [String : Any?]
+    func getDict() -> [[String : Any?]]
 }
