@@ -165,7 +165,15 @@ open class SurveyQuestions {
     }
     
     func questionIndex(for section: Int) -> Int {
+        
+        if (self.previousSkipCount.count < section)
+        {
         return section + self.previousSkipCount[section]
+        }
+        else
+        {
+            return section 
+        }
     }
     
     class open func loadFromJsonObject(dict: [[String: Any?]], surveyTheme: SurveyTheme) -> SurveyQuestions? {
@@ -179,7 +187,7 @@ open class SurveyQuestions {
                 
                 var submitData:[String: String] = [:]
                 
-                submitData["button_title"] = "Submit"
+                submitData["button_title"] = "Upload a Video"
                 submitData["url"] = ""
                 // dict[0]["submit"] as! [String : String]
                 
