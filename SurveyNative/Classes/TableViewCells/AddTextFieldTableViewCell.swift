@@ -68,6 +68,7 @@ class AddTextFieldTableViewCell: UITableViewCell, UITextFieldDelegate, TableView
       newTextField.borderStyle = .roundedRect
       newTextField.font = firstTextField?.font
       newTextField.enablesReturnKeyAutomatically = true
+      newTextField.autocorrectionType = .no
       newTextField.addTarget(self, action: #selector(enterTapped(_:)), for: .primaryActionTriggered)
       self.verticalStack?.addArrangedSubview(newTextField)
       self.extraTextFields.append(newTextField)
