@@ -168,7 +168,7 @@ open class SurveyQuestions {
         
         if (self.previousSkipCount.count < section)
         {
-        return section + self.previousSkipCount[section]
+           return section + self.previousSkipCount[section]
         }
         else
         {
