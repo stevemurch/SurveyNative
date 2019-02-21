@@ -45,6 +45,9 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate, TableViewCel
       selectionStyle = .none
       self.accessoryView = nextButton
       self.textField!.delegate = self
+      self.textField!.autocorrectionType = .no
+      self.textField!.autocapitalizationType = .none
+     
    }
    
    override func setSelected(_ selected: Bool, animated: Bool) {
