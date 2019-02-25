@@ -12,7 +12,7 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate, TableViewCel
     @IBOutlet var textFieldLabel: UILabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var nextButton: UIButton!
-     
+    
     var dataDelegate: TableCellDataDelegate?
     var updateId: String?
     var textFieldText: String? {
